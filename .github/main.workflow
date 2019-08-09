@@ -6,5 +6,10 @@ workflow "Deploy to Demo" {
 action "maddox/actions/ssh@master" {
   uses = "maddox/actions/ssh@master"
   args = "cd /var/www/sql && git pull"
-  secrets = ["PORT", "PRIVATE_KEY", "HOST", "USER"]
+  secrets = [
+    "PORT",
+    "HOST",
+    "USER",
+    "PRIVATE_KEY",
+  ]
 }
